@@ -8,7 +8,7 @@ export async function generateStaticParams() {
   const res = await data.json();
 
   return res.results.map((movie) => ({
-    movie: toString(movie.id),
+    movie: String(movie.id),
   }));
 }
 
@@ -29,7 +29,13 @@ export default async function MovieDetail({ params }) {
         <h2>Runtime:{res.runtime} minutes</h2>
         <h2 className={styles.status}>{res.status}</h2>
         <div>
-          <Image src={imagePath + res.backdrop_path} fill priority className={styles.image} />
+          <Image
+            src={imagePath + res.backdrop_path}
+            fill
+            priority
+            className={styles.image}
+            alt="movieImage"
+          />
         </div>
         <p className={styles.overview}>{res.overview}</p>
       </div>
