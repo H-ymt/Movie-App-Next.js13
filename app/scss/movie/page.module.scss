@@ -1,0 +1,19 @@
+.status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: green;
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+.image {
+  object-fit: cover;
+  position: relative !important;
+  width: auto !important;
+}
+
+.overview {
+  margin-top: 8px;
+  font-size: 16px;
+}

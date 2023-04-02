@@ -1,0 +1,21 @@
+@import "./_breakpoint";
+
+.mainContainer {
+  display: grid;
+  align-items: end;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, 1fr); /* スマホサイズでは1列 */
+  text-align: center;
+
+  @include mq(sm) {
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
+  }
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr); /* タブレット幅では3列 */
+  }
+
+  @include mq(lg) {
+    grid-template-columns: repeat(4, 1fr); /* PC幅では5列 */
+  }
+}
